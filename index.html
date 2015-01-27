@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brick Breaker</title>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  	<meta name="HandheldFriendly" content="True">
+  	<meta name="MobileOptimized" content="320">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!--   	<link rel="apple-touch-startup-image" href="/startup.png"> -->
+   	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+   	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js" rel="text/javascript"><\/script>')</script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery.hotkeys.js"></script>
+	<script type="text/javascript" src="js/key_status.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<style>
+		canvas {
+/* 			border: 1px solid black; */
+			display: block;
+			padding: 0px auto;
+			max-width: 800px;
+			position:relative;
+			margin: 0 auto;
+		}
+		#main{
+			position:relative;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		#main p{
+			text-align: center;
+		}
+
+	</style>
+  </head>
+
+  <body>
+  
+  <div data-role="page" id="main">
+  
+  	<div data-role="header">
+		<div data-role="navbar">
+			<p>Copyright &copy 2014 Jack B. Du All rights reserved.</p>
+			<ul>
+				<li><a data-icon="heart" id="life">LIFE</a></li>
+				<li><a data-icon="star" id="score">SCORE</a></li>
+				<li><a data-icon="check" id="level">LEVEL</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="content">
+	</div>
+ 
+  	<div data-role="footer">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-icon="carat-l" id="left" style="height:2em;"></a></li>
+				<li><a data-icon="carat-u" id="up" style="height:2em;"></a></li>
+				<li><a data-icon="carat-r" id="right" style="height:2em;"></a></li>
+			</ul>
+		</div>
+	</div>
+
+  </div>
+
+  </body>
+
+</html>
