@@ -4,14 +4,15 @@ var viewport = {
     height : $(window).height()
 };
 
-var hitAudio = new Audio('audio/hit.wav');
-var levelAudio = new Audio('audio/level.wav');
-var bounceAudio = new Audio('audio/bounce.wav');
+var hitAudio = new Audio('src/hit.wav');
+var levelAudio = new Audio('src/level.wav');
+var bounceAudio = new Audio('src/bounce.wav');
+var loseAudio = new Audio('src/lose.wav');
 
 // initial settings
-var CANVAS_WIDTH = viewport.width;
-var CANVAS_HEIGHT = viewport.width / 1.7;
-var UNIT = viewport.width / 5;
+var CANVAS_WIDTH = 600;
+var CANVAS_HEIGHT = 400;
+var UNIT = 600 / 5;
 var canvasElement = $("<canvas width='" + CANVAS_WIDTH + 
                       "' height='" + CANVAS_HEIGHT + "'>Your browser does not support the HTML5 canvas tag.</canvas>");
 var canvas = canvasElement.get(0).getContext("2d");
@@ -39,7 +40,7 @@ var leftBricks;
 $(document).ready(function(){
 	$("#life").text(life);
 	$("#score").text(score);
-	canvasElement.appendTo('.content'); // create canvas in body
+	canvasElement.appendTo('#canvas_container'); // create canvas in body
 	setInterval(function() {
  		update();
  		draw();
@@ -47,7 +48,7 @@ $(document).ready(function(){
 });
 // 
 var board = {
-	color: "#979797",
+	color: "rgba(41, 98, 255, 0.5)",
 	x: CANVAS_WIDTH/2,
 	y: CANVAS_HEIGHT,
 	w: UNIT,
@@ -63,7 +64,7 @@ var ball = {
 	x: board.x,
 	y: board.y-board.h-UNIT/10,
 	draw: function() {
-		canvas.fillStyle = "#8F8F8F";
+		canvas.fillStyle = "rgba(41, 98, 255, 0.9)";
 		canvas.beginPath();
 		canvas.arc(this.x, this.y, this.r, 0, 2*Math.PI, true);
 		canvas.closePath();
@@ -80,7 +81,7 @@ function getPositions() {
 function brick(temX, temY, temColor) {
 	this.color = temColor,
 	this.w = UNIT/2,
-	this.h = UNIT/5,
+	this.h = UNIT/5-1,
 	this.x = temX,
 	this.y = temY,
 	this.draw = function() {
@@ -152,7 +153,7 @@ function setBricks() {
 			r += 1;
 			c = 0;
 		}
-		bricks[i] = new brick(UNIT/4+c*UNIT+displacement[r],r*UNIT/5+UNIT/10,"#979797");
+		bricks[i] = new brick(UNIT/4+c*UNIT+displacement[r],r*UNIT/5+UNIT/10,"rgba(41, 98, 255, 0.5)");
 		c++;
 	}
 }
@@ -264,6 +265,7 @@ function checkBall() {
 			} else {
 				if (life>0) {
 					life--;
+					loseAudio.play();
 					$("#life").text(life);
 				} else {
 					gameover = true;
@@ -296,3 +298,12 @@ $(document).ready(function(){
 		keydown.right = false;
 	});
 });
+
+// prevent scrolling with arrow keys, and space bar
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    var keyCode = evt.keyCode;
+    if (keyCode >= 37 && keyCode <= 40 || keyCode == 32) {
+        return false;
+    }
+};

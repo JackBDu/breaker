@@ -1,0 +1,174 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,800);
+* {
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+}
+html, body, header, footer, div {
+    margin: 0 auto;
+    padding: 0 auto;
+    border: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    /*height: 100%;*/
+}
+body {
+    /* IE10 Consumer Preview */ 
+    /*background-image: -ms-radial-gradient(center top, ellipse farthest-side, #fff 0%, #82b1ff 100%);*/
+    /* Mozilla Firefox */ 
+    /*background-image: -moz-radial-gradient(center top, ellipse farthest-side, #fff 0%, #82b1ff 100%);*/
+    /* Opera */ 
+    /*background-image: -o-radial-gradient(center top, ellipse farthest-side, #fff 0%, #82b1ff 100%);*/
+    /* Webkit (Safari/Chrome 10) */ 
+    /*background-image: -webkit-gradient(radial, center top, 0, center top, 477, color-stop(0, #fff), color-stop(1, #82b1ff));*/
+    /* Webkit (Chrome 11+) */ 
+    /*background-image: -webkit-radial-gradient(center top, ellipse farthest-side, #fff 0%, #82b1ff 100%);*/
+    /* W3C Markup, IE10 Release Preview */ 
+    /*background-image: radial-gradient(ellipse farthest-side at center top, #fff 0%, #82b1ff 100%);*/
+    /*background-attachment: fixed;*/
+    background: rgba(130, 177, 255, 0.8);
+    color: #0d47a1;
+	font-family: 'Exo 2', sans-serif;
+}
+#content_container {
+    width: 600px;
+    text-align: center;
+    padding-bottom: 80px;
+}
+#title {
+	font-size: 70px;
+	position: relative;
+	float: left;
+	padding-top: 55px;
+}
+#scores_container {
+	font-size: 20px;
+	position: relative;
+	float: right;
+	padding-top: 75px;
+	text-align: right;
+}
+#score, #level, #life {
+	display: inline-block;
+}
+#score_container, #level_container, #life_container {
+	display: block;
+}
+.clear_float {
+	clear: both;
+}
+div#info_container {
+	text-align: center;
+	height: 400px;
+	width: 600px;
+	display: block;
+	position: absolute;
+	top: 180px;
+	z-index: 9999;
+	border-radius: 10px;
+}
+div#info_container.glass {
+	background: rgba(255, 255, 255, 0.1);
+}
+#static_pause {
+	position: absolute;
+	top: -105px;
+	right: 120px;
+}
+button {
+	outline: 0;
+}
+#game_over {
+	display: none;
+	margin-top: 80px;
+}
+#pause {
+	display: none;
+	margin-top: 115px;
+}
+#difficulties {
+	margin-top: 115px;
+}
+.info {
+	padding: 20px 0;
+	font-size: 40px;
+	color: rgba(41, 98, 255, 0.8);
+}
+.button {
+	font-size: 30px;
+	font-family: 'Exo 2', sans-serif;
+	color: rgba(41, 98, 255, 0.8);
+	padding: 10px 10px;
+	margin: 0 10px;
+	/*border: 5px solid rgba(41, 98, 255, 0.8);*/
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 15px;
+}
+.button:hover {
+	font-size: 30px;
+	font-family: 'Exo 2', sans-serif;
+	color: rgba(255, 255, 255, 0.8);
+	padding: 10px 10px;
+	background: rgba(41, 98, 255, 0.8);
+	/*border: 5px solid rgba(41, 98, 255, 0.8);*/
+	border-radius: 15px;
+}
+#info_container .button h2{
+	position: relative;
+	float: left;
+}
+.button .hollow {
+	color: rgba(41, 98, 255, 0.2)
+} 
+.button .hollow:hover {
+	color: rgba(41, 98, 255, 0.8);
+} 
+#canvas_container {
+    margin: 40px auto;
+	width: 600px;
+	height: 400px;
+    /*border: 5px solid rgba(41, 98, 255, 0.3);*/
+    border-radius: 10px;
+}
+canvas {
+    border-radius: 10px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+canvas.blur {
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+}
+div#game-explanation {
+	text-align: justify;
+	font-size: 20px;
+	line-height: 30px;
+}
+div#game-explanation hr {
+	border: 1px solid rgba(13, 71, 161, 0.3);
+	margin: 20px 0px;
+}
+div#game-explanation a {
+	text-decoration: bold;
+	color: #0d47a1;
+	font-weight: bold;
+}
+footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    border-top: 1px solid #fff;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 10000;
+}
+footer p{
+    padding: 16px 0;
+}
