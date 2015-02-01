@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Brick Breaker</title>
+    <title>Breaker</title>
     <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
   	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -10,14 +10,8 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <!--   	<link rel="apple-touch-startup-image" href="/startup.png"> -->
    	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-   	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js" rel="text/javascript"><\/script>')</script>
-	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/jquery.hotkeys.js"></script>
-	<script type="text/javascript" src="js/key_status.js"></script>
-	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
-	<style>
+   	<link rel="stylesheet" href="style/main.css" />
+<!--	<style>
 		canvas {
 /* 			border: 1px solid black; */
 			display: block;
@@ -36,9 +30,54 @@
 		}
 
 	</style>
+-->
   </head>
-
-  <body>
+    <body>
+        <div id="content_container">
+            <header>
+                <h1 id="title">BREAKER</h1>
+                <div id="scores_container">
+                    <div id="score_container">SCORE: <div id="score">0</div></div>
+                    <div id="life_container">LIFE: <div id="life">0</div></div>
+                    <div id="level_container">LEVEL: <div id="level">0</div></div>
+                </div>
+            </header>
+            <div class="clear_float"></div>
+            <div id="canvas_container">
+<!--                <div id="info_container" class="glass">
+                    <div id="static_pause">
+                        <button class="button" id="force_pause"><strong>PAUSE</strong></button>
+                    </div>
+                     <div id="game_over">
+                        <div class="info"><h2 id="result"></h2><h2>YOU GOT <strong id="final_score"></strong></h2></div>
+                        <button class="button" id="restart"><h2>RESTART</h2></button>
+                    </div>
+                    <div id="pause">
+                        <div class="info"><h2>PAUSED</h2></div>
+                        <button class="button" id="resume"><h2>RESUME</h2></button>
+                        <button class="button" id="restart2"><h2>RESTART</h2></button>
+                    </div>
+                    <div id="difficulties">
+                        <div class="info"><h2>DIFFICULTY</h2></div>
+                        <button class="button" id="easy"><h2>!</h2><h2 class="hollow">!!!</h2></button>
+                        <button class="button" id="hard"><h2>!!</h2><h2 class="hollow">!!</h2></button>
+                        <button class="button" id="insane"><h2>!!!</h2><h2 class="hollow">!</h2></button>
+                        <button class="button" id="crazy"><h2>!!!!</h2></button>
+                    </div>
+                </div> -->
+                <div id="canvas"></div>
+            </div>
+            <div id="game-explanation">
+                <p><strong>HOW TO PLAY: </strong>Use <strong>arrow keys </strong>move the bouncing board. Bounce the ball back and forth to break the <strong>bricks </strong>.</p>
+                <hr>
+                <p>Created by <a href="http://jackbdu.github.io" target="_blank">Jack B. Du</a>. The concept is based on the classic game Breaker.</p>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright &copy 2014-2015 Jack B. Du All rights reserved.</p>
+        </footer>
+    </body>
+<!--   <body>
   
   <div data-role="page" id="main">
   
@@ -68,6 +107,11 @@
 
   </div>
 
-  </body>
-
+  </body> -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js" rel="text/javascript"><\/script>')</script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery.hotkeys.js"></script>
+	<script type="text/javascript" src="js/key_status.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 </html>
