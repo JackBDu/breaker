@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <title>Breaker</title>
     <meta charset="UTF-8">
@@ -10,9 +10,9 @@
   	<meta name="HandheldFriendly" content="True">
   	<meta name="MobileOptimized" content="320">
   	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<!--   	<link rel="apple-touch-startup-image" href="/startup.png"> -->
+<!--   	<link rel="apple-touch-startup-image" href="../startup.png"> -->
    	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-   	<link rel="stylesheet" href="style/main.css" />
+   	<link rel="stylesheet" href="../style/main.css" />
 <!--	<style>
 		canvas {
 /* 			border: 1px solid black; */
@@ -37,11 +37,11 @@
     <body>
         <div id="content_container">
             <header>
-                <h1 id="title">BREAKER</h1>
+                <h1 id="title">砸砖块</h1>
                 <div id="scores_container">
-                    <div id="score_container">SCORE: <div id="score">0</div></div>
-                    <div id="life_container">LIFE: <div id="life">0</div></div>
-                    <div id="level_container">LEVEL: <div id="level">0</div></div>
+                    <div id="score_container">得分：<div id="score">0</div></div>
+                    <div id="life_container">生命：<div id="life">0</div></div>
+                    <div id="level_container">关卡：<div id="level">0</div></div>
                 </div>
             </header>
             <div class="clear_float"></div>
@@ -70,9 +70,9 @@
                 <div id="canvas"></div>
             </div>
             <div id="game-explanation">
-                <p><strong>HOW TO PLAY: </strong>Use <strong>arrow keys </strong>move the bouncing board. Bounce the ball back and forth to break the <strong>bricks </strong>.</p>
+                <p><strong>游戏规则：</strong>使用<strong>方向键</strong>左右移动反弹板，将球来回反弹来击碎<strong>砖块</strong>。</p>
                 <hr>
-                <p>Created by <a href="http://jackbdu.github.io" target="_blank">Jack B. Du</a>. The concept is based on the classic game Breaker.</p>
+                <p>该游戏由<a href="http://jackbdu.github.io" target="_blank">杜佳东</a>设计编写而成。游戏规则基于经典的砸砖块游戏。</p>
             </div>
         </div>
         <footer>
@@ -112,8 +112,8 @@
   </body> -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js" rel="text/javascript"><\/script>')</script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/jquery.hotkeys.js"></script>
-	<script type="text/javascript" src="js/key_status.js"></script>
-	<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/jquery.hotkeys.js"></script>
+	<script type="text/javascript" src="../js/key_status.js"></script>
+	<script type="text/javascript" src="../js/jquery.touchSwipe.min.js"></script>
 </html>
